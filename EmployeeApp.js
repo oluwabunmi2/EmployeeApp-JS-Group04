@@ -13,19 +13,31 @@ class Employee{
         this.salary = salary;
     }
 
-
-    get ID(){
+// getter methods for the private objects initialization
+    getID(){
         return this.id;
     };
 
-    get name(){
-        return this.Name;
+    getName(){
+        return this.nameame;
     };
-    get department(){
+    getDepartment(){
         return this.department;
     };
 
-    get alary(){
+    getSalary(){
         return this.salary;
     };
 };
+
+// Manager class inheritance
+class Manager extends Employee{
+    bonus = 0;
+
+    // Overriding the getSalary method
+    getSalary(){
+        this.salary= this.salary + this.bonus;
+
+    }
+
+}
