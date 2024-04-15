@@ -28,6 +28,10 @@ class Employee{
     getSalary(){
         return this.salary;
     };
+
+    calculatePaycheck(){
+        return this.salary;
+    }
 };
 
 // Manager class inheritance
@@ -40,4 +44,9 @@ class Manager extends Employee{
 
     }
 
+    calculatePaycheck(){
+        Manager.getSalary();
+    }
+
 }
+
