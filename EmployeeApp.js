@@ -1,25 +1,31 @@
 class Employee{
+    // private properties of the class
+    id= 0;
+    name = "";
+    department= "";
+    salary= 0;
 
-    constructor(){
-        id= Number;
-        Name = String;
-        department= String;
-        salary= Number;
+    constructor(id,name,department, salary){
+        // initialization
+        this.id= id;
+        this.name= name;
+        this.department= department;
+        this.salary = salary;
     }
 
-    getID(){
+
+    get ID(){
         return this.id;
-    }
+    };
 
-    getname(){
+    get name(){
         return this.Name;
-    }
-
-    getdepartment(){
+    };
+    get department(){
         return this.department;
-    }
+    };
 
-    getsalary(){
+    get alary(){
         return this.salary;
-    }
-}
+    };
+};
