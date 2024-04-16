@@ -12,3 +12,7 @@ function AddEmployee(){
     // Adding new employee at the end of the employee list
     employees.push(addEmployee);
 }
+
+for(let index=0; index <= employees.length; index++){
+    console.log(employees[index]);
+}
