@@ -38,6 +38,6 @@ In the Manager class, call the getSalary method (which includes the bonus) to re
  Sugira Vincent
  Oluwabunmi Adebanjo
 
-# Important links: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#static_initialization_blocks
-
+# Important links: 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#static_initialization_blocks
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
