@@ -35,8 +35,8 @@ In the Employee class, simply return the salary.
 In the Manager class, call the getSalary method (which includes the bonus) to return.
 
 # Group members
- Sugira Vincent.
- Oluwabunmi Adebanjo.
+Sugira Vincent.
+Oluwabunmi Adebanjo.
 
 # Important links: 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#static_initialization_blocks
