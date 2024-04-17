@@ -35,7 +35,7 @@ In the Employee class, simply return the salary.
 In the Manager class, call the getSalary method (which includes the bonus) to return.
 
 # Group members:
-*Sugira Vincent*
+*Sugira Vincent&
 *Oluwabunmi Adebanjo*
 
 # Important links: 
