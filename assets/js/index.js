@@ -5,23 +5,24 @@ const displayEmployee = (employees) => {
     employees.forEach(employee => {
         Display.innerHTML += `  
         <tr>
-        <td>${employee._id}</td>
-        <td>${employee.name}</td>
-        <td>${employee.department}</td>
-        <td>${employee.salary}</td>
-        <td>
-            <a href="./update.html?=${employee._id}"><i class="fas fa-edit"></i></a>
-            <a href="#" class="delete_employee" data-employee-id="${employee._id}"><i class="fas fa-trash-alt"></i></a>
-        </td>
+            <td>${employee._id}</td>
+            <td>${employee.name}</td>
+            <td>${employee.department}</td>
+            <td>${employee.salary}</td>
+            <td>
+                <a href="./update.html?=${employee._id}"><i class="fas fa-edit"></i></a>
+                <a href="#" class="delete_employee" data-employee-id="${employee._id}"><i class="fas fa-trash-alt"></i></a>
+            </td>
         </tr>
         `;
     });
 
     // Add event listener for delete buttons
-    document.querySelectorAll('.delete_employee').forEach(deleteButton => {
+    const deleteButtons = Display.querySelectorAll('.delete_employee');
+    deleteButtons.forEach(deleteButton => {
         deleteButton.addEventListener('click', (event) => {
             event.preventDefault(); // Prevent default link behavior
-            const employeeId = event.target.dataset.employeeId;
+            const employeeId = deleteButton.getAttribute('data-employee-id');
             if (employeeId) {
                 deleteEmployee(employeeId);
             }
@@ -58,6 +59,8 @@ async function deleteEmployee(id) {
                displayEmployee(data);
             })
             .catch(error => console.log(error));
+        } else {
+            console.error('Error deleting employee:', response.statusText);
         }
     } catch (error) {
         console.log(error);
