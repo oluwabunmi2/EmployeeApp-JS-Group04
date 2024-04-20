@@ -1,9 +1,9 @@
 const Display = document.querySelector('.display');
 
 const displayEmployee = (employees) => {
-    Display.innerHTML = ''; // Clear the previous content
+    Display.innerHTML = '';
     employees.forEach(employee => {
-        Display.innerHTML += `
+        Display.innerHTML += `  
         <tr>
         <td>${employee._id}</td>
         <td>${employee.name}</td>
