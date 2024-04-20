@@ -1,4 +1,4 @@
-class Employee{
+export default class Employee{
     // private properties of the class
     id= 0;
     name = "";
