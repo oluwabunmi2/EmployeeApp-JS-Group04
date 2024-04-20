@@ -1,9 +1,14 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const Employee = require('./model/employee')
+const cors = require('cors')
 
 const app = express()
 app.use(express.json())
+app.use(cors({
+    origin: 'http://127.0.0.1:5500',
+    credentials: true
+}))
 
 mongoose.connect('mongodb+srv://sugira:Sugiravincent12@cluster0.y9stlob.mongodb.net/Employee_Management')
 .then(res => {
@@ -36,6 +41,16 @@ app.get('/', async(req, res) => {
     } catch (error) {
         console.log(error)
         res.status(500).json(error)
+    }
+})
+app.get('/:id', async(req, res) =>{
+    try {
+        const {id} = req.params
+        const employee = await Employee.findById(id)
+        res.status(200).json(employee)
+    } catch (error) {
+        res.status(500).json(error)
+        consol.log(error)
     }
 })
 app.put('/edit/:id', async(req,res) => {

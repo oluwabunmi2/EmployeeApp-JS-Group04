@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Employee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/create.css">
+</head>
+<body>
+    <h1>Create Employee</h1>
+    <form action="http://localhost:3000/post" id="form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department" required>
+
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" required>
+
+        <input type="submit" value="Create Employee">
+    </form>
+    <script src="../assets/js/create.js"></script>
+</body>
+</html>
