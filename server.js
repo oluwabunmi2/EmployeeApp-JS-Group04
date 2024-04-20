@@ -50,7 +50,7 @@ app.get('/:id', async(req, res) =>{
         res.status(200).json(employee)
     } catch (error) {
         res.status(500).json(error)
-        consol.log(error)
+        console.log(error)
     }
 })
 app.put('/edit/:id', async(req,res) => {
