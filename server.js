@@ -3,7 +3,10 @@ const mongoose = require('mongoose')
 const Employee = require('./model/employee')
 const cors = require('cors')
 
+// creating new instance of the App
 const app = express()
+
+// parse a req.body
 app.use(express.json())
 app.use(cors({
     origin: 'http://127.0.0.1:5500',
@@ -34,6 +37,7 @@ app.post('/post', async(req, res) => {
     }
 })
 
+// Reading all employees
 app.get('/', async(req, res) => {
     try {
         const employees = await Employee.find()
@@ -43,6 +47,8 @@ app.get('/', async(req, res) => {
         res.status(500).json(error)
     }
 })
+
+// getting individual employee
 app.get('/:id', async(req, res) =>{
     try {
         const {id} = req.params
@@ -53,6 +59,8 @@ app.get('/:id', async(req, res) =>{
         console.log(error)
     }
 })
+
+// Editing employee info
 app.put('/edit/:id', async(req,res) => {
     try {
         const {name, department, salary} = req.body
@@ -74,6 +82,8 @@ app.put('/edit/:id', async(req,res) => {
         res.status(500).json(error)
     }
 })
+
+// delete employee
 
 app.delete('/delete/:id', async(req, res) =>{
     try {
